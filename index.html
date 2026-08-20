@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- ANIMASI BINTANG JATUH (DI PALING BELAKANG) -->
+    <!-- ========================================== -->
+    <div id="stars-container"></div>
+    
+    <!-- ========================================== -->
+    <!-- ANIMASI OMBAK BACKGROUND (DI PALING BELAKANG) -->
+    <!-- ========================================== -->
+    <div class="wave-container">
+        <div class="wave-bg"></div>
+        <div class="wave-bg"></div>
+        <div class="wave-bg"></div>
+    </div>
+
+    <div id="custom-cursor"></div>
+
+    <div class="global-glow"></div>
+
+    <nav id="navbar" class="nav-hidden">
+        <div class="nav-logo">Trisman.dev</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#organization">Organization</a></li>
+            <li><a href="#working">Working</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#achievement">Achievement</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="splash" class="welcome-container">
+        <div class="icons-wrapper slide-in-left">
+            <div class="icon-circle"><i class="fa-solid fa-code"></i></div>
+            <div class="icon-circle"><i class="fa-regular fa-user"></i></div>
+            <div class="icon-circle"><i class="fa-solid fa-globe"></i></div>
+        </div>
+        <h1 id="typing-text" class="main-title"></h1>
+        
+        <a href="#home" class="scroll-indicator slide-in-left url-delay">
+            SCROLL &darr;
+        </a>
+    </section>
+
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <p class="available-badge hidden-el from-left">
+                + AVAILABLE FOR WORK &nbsp;|&nbsp; <span class="text-neon">Makassar</span> 90222 - ID
+            </p>
+            
+            <h1 class="hero-title hidden-el from-bottom">
+                <span class="text-white">AI & Machine Learning</span><br>
+                <span class="text-neon">Enthusiast</span>
+            </h1>
+
+            <p id="typing-subtitle" class="subtitle"></p>
+
+            <p class="description hidden-el from-left">
+                Memiliki ketertarikan dan pengalaman dalam bidang Artificial Intelligence, Machine Learning, dan Deep Learning. Berfokus pada pengembangan dan penerapan teknologi berbasis data untuk membangun solusi yang inovatif serta menjawab berbagai kebutuhan di dunia nyata.
+            </p>
+
+            <div class="social-icons hidden-el from-left">
+                <a href="mailto:wtrismantegar@gmail.com" target="_blank" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/trismantegar48" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/trismanttw" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://wa.me/6282192746670" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+            <div class="action-buttons hidden-el from-bottom">
+                <a href="assets/docs/CV_TrismanTegarWiratama.pdf" class="btn btn-outline" download>Download CV</a>
+                <a href="#portofolio" class="btn btn-primary">Lihat Karya Saya</a>
+            </div>
+        </div>
+
+        <div class="home-visual hidden-el from-right">
+            <div class="swing-wrapper">
+                <div class="id-card-wrapper" data-tilt data-tilt-max="25" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="strap">
+                        <span>3D CARD</span>
+                    </div>
+                    <div class="id-card">
+                        <img src="assets/img/fotoformal.PNG" alt="Profile">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="content-section hidden-el from-bottom">
+        <div class="about-container">
+            <div class="about-text">
+                <p class="about-label">ABOUT ME</p>
+                <h2 class="about-name">Trisman<br>Tegar<br>Wiratama</h2>
+                <p class="about-description">
+                    Lulusan S1 Program Studi Sistem Informasi Universitas Hasanuddin dengan peminatan Kecerdasan Buatan (Artificial Intelligence) dan IPK 3,94. Memiliki ketertarikan yang kuat pada bidang teknologi informasi, pengembangan sistem, kecerdasan buatan, analisis data, serta transformasi digital. Selama masa perkuliahan, aktif mengembangkan kompetensi melalui berbagai kegiatan akademik, organisasi, kepanitiaan, kompetisi, serta pengalaman magang yang mendukung penguasaan keterampilan teknis maupun nonteknis.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="assets/img/ganteng.jpg" alt="Trisman Tegar Wiratama">
+            </div>
+        </div>
+
+        <div class="about-stats">
+            <!-- Kartu 1: GPA -->
+            <div class="stat-box">
+                <div class="stat-header">
+                    <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="stat-number">3.94</div>
+                </div>
+                <div class="stat-footer">
+                    <div class="stat-title">GPA / 4.00</div>
+                </div>
+            </div>
+            
+            <!-- Kartu 2: PROJECTS (Sudah ada ID) -->
+            <a href="#portofolio" id="link-about-projects" class="stat-box link-box">
+                <div class="stat-header">
+                    <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="stat-number">6</div>
+                </div>
+                <div class="stat-footer">
+                    <div class="stat-title">Projects</div>
+                    <div class="stat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+            
+            <!-- Kartu 3: CERTIFICATES (Sudah ada ID) -->
+            <a href="#portofolio" id="link-about-certs" class="stat-box link-box">
+                <div class="stat-header">
+                    <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="stat-number">9</div>
+                </div>
+                <div class="stat-footer">
+                    <div class="stat-title">Certificates</div>
+                    <div class="stat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+            
+            <!-- Kartu 4: ACHIEVEMENT -->
+            <a href="#achievement" class="stat-box link-box">
+                <div class="stat-header">
+                    <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="stat-number">11</div>
+                </div>
+                <div class="stat-footer">
+                    <div class="stat-title">Achievement</div>
+                    <div class="stat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+            
+            <!-- Kartu 5: COMPLETED WORKS -->
+            <a href="#working" class="stat-box link-box">
+                <div class="stat-header">
+                    <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="stat-number">1</div>
+                </div>
+                <div class="stat-footer">
+                    <div class="stat-title">Completed Works</div>
+                    <div class="stat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="education" class="content-section hidden-el from-left">
+            <h2 class="section-heading">Education</h2>
+            
+            <div class="edu-container">
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <img src="assets/img/unhas.png" alt="Unhas Logo" class="edu-logo">
+                        <div class="edu-info">
+                            <h3 class="edu-title">Universitas Hasanuddin</h3>
+                            <p class="edu-degree">Bachelor's Degree, Information Systems</p>
+                            <div class="edu-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 2022 - 2026</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Makassar, Indonesia</span>
+                            </div>
+                            <div class="edu-badge">
+                                <i class="fa-solid fa-award"></i> GPA : 3.94/4.00
+                            </div>
+                        </div>
+                        <div class="edu-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <div class="edu-body">
+                        <ul class="edu-achievements">
+                            <li>Awardee Beasiswa Unggulan Kemendikdasmen (2023)</li>
+                            <li>2nd Runner Up Ucmas International Abacus Competition 2023 Category Visual H (Quick Count) (2023)</li>
+                            <li>Bronze Cup Ucmas World Cup Abacus Competition for Indonesian Team (2023)</li>
+                            <li>Merit (Harapan 2) Ucmas International Abacus Competition 2023 Category Flash Calculation (2023)</li>
+                            <li>Grand Champion (Juara 1) Olimpiade Aritmatika Sempoa Nasional 2023 Kategori Flash Calculation C (2023)</li>
+                            <li>Juara Merit (Harapan) Olimpiade Aritmatika Sempoa Nasional 2023 Kategori Visual Grand Level (Hitung Cepat) (2023)</li>
+                            <li>Runner Up 1 (Juara 2) Olimpiade Aritmatika Sempoa Nasional 2023 Kategori Listening Calculation C (2023)</li>
+                            <li>Grand Champion (Juara 1) Olimpiade Aritmatika Sempoa Nasional 2024 Kategori Listening Calculation Senior (2024)</li>
+                            <li>1st Runner Up (Juara 2) Olimpiade Artimatika Sempoa Nasional 2024 Kategori Grand Level (2024)</li>
+                            <li>1st Runner Up (Juara 2) Olimpiade Artimatika Sempoa Nasional 2024 Kategori Flash Calculation Senior (2024)</li>
+                            <li>Mahasiswa Berprestasi Tingkat Fakultas MIPA (2024)</li>
+                            <li>Mahasiswa Berprestasi Tingkat Program Studi Sistem Informasi (2024)</li>
+                            <li>Yudisium Wisudawan Fakultas MIPA Periode Mei 2026 dengan Predikat Cumlaude IPK 3.94 (2026)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <img src="assets/img/smanses.png" alt="SMAN 11 Logo" class="edu-logo">
+                        <div class="edu-info">
+                            <h3 class="edu-title">SMAN 11 Makassar</h3>
+                            <p class="edu-degree">Senior High School, Science</p>
+                            <div class="edu-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 2019 - 2022</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Makassar, Indonesia</span>
+                            </div>
+                            <div class="edu-badge">
+                                <i class="fa-solid fa-star"></i> Score : 95.08
+                            </div>
+                        </div>
+                        <div class="edu-toggle"><i class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                    <div class="edu-body">
+                        <ul class="edu-achievements">
+                            <li>Juara 1 (CHAMPION) Kompetisi Aritmatika Sempoa Nasional Kategori Visual Advance (2021)</li>
+                            <li>Juara 1 (CHAMPION) Kompetisi Aritmatika Sempoa Nasional Kategori Flash Calculation Senior (2021)</li>
+                            <li>Juara 1 (CHAMPION) Kompetisi Aritmatika Sempoa Nasional Kategori Listening Calculation Senior (2021)</li>
+                            <li>Peserta Olimpiade APBN 2021 (2021)</li>
+                            <li>Runner Up 1 Kompetisi Aritmatika Sempoa Internasional Kategori Hitung Cepat Senior (2021)</li>
+                            <li>Juara 1 (CHAMPION) Kompetisi Aritmatika Sempoa Nasional Kategori Flash Calculation Senior (2022)</li>
+                            <li>Runner Up 1 Kompetisi Aritmatika Sempoa Nasional Kategori Flash Calculation Senior (2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="organization" class="content-section hidden-el from-left">
+        <h2 class="section-heading">Organization <span class="text-neon">Experience</span></h2>
+        
+        <div class="org-grid">
+            <div class="org-item first-item">
+                <div class="org-timeline">
+                    <div class="tl-circle"></div>
+                </div>
+                <div class="org-card">
+                    <div class="org-date">Okt 2019 — Des 2021</div>
+                    <h3 class="org-title">OSIS SMAN 11 Makassar</h3>
+                    <div class="org-role">Wakil Ketua & Ketua OSIS</div>
+                    <div class="org-desc">
+                        <strong>Tugas Wakil (Okt 2019 - Nov 2020):</strong>
+                        <ul>
+                            <li>Membantu Ketua OSIS menjalankan tugas organisasi.</li>
+                            <li>Menggantikan Ketua OSIS bila berhalangan.</li>
+                            <li>Mengoordinasikan pengurus agar program kerja sesuai rencana.</li>
+                        </ul>
+                        <strong>Tugas Ketua (Des 2020 - Des 2021):</strong>
+                        <ul>
+                            <li>Memimpin organisasi dan mengoordinasikan kegiatan.</li>
+                            <li>Menyusun dan mengawasi program kerja OSIS.</li>
+                            <li>Menjadi perwakilan siswa menyampaikan aspirasi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="org-item">
+                <div class="org-timeline">
+                    <div class="tl-circle"></div>
+                </div>
+                <div class="org-card">
+                    <div class="org-date">Des 2020 — Okt 2021</div>
+                    <h3 class="org-title">Forum Ketos Sulsel (FORSIS)</h3>
+                    <div class="org-role">Anggota Forum</div>
+                    <div class="org-desc">
+                        <ul>
+                            <li>Mewakili sekolah dalam kegiatan, rapat, atau musyawarah forum.</li>
+                            <li>Membangun jejaring dengan Ketua OSIS dari sekolah lain.</li>
+                            <li>Menyampaikan informasi dari forum kepada pengurus OSIS dan pihak sekolah.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="org-item">
+                <div class="org-timeline">
+                    <div class="tl-circle"></div>
+                </div>
+                <div class="org-card">
+                    <div class="org-date">Mei 2024 — Apr 2026</div>
+                    <h3 class="org-title">Forum Beasiswa Unggulan Indotim</h3>
+                    <div class="org-role">Anggota Bidang Kewirausahaan</div>
+                    <div class="org-desc">
+                        <ul>
+                            <li>Menyusun ide dan konsep kegiatan yang berkaitan dengan bisnis dan kewirausahaan.</li>
+                            <li>Menginisiasi usaha yang dapat menjadi sumber pendanaan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="org-item last-item">
+                <div class="org-timeline">
+                    <div class="tl-circle"></div>
+                </div>
+                <div class="org-card">
+                    <div class="org-date">Okt 2024 — Mei 2025</div>
+                    <h3 class="org-title">BE HIMATIKA FMIPA Unhas</h3>
+                    <div class="org-role">Koordinator Bidang Akademik & Kemahasiswaan</div>
+                    <div class="org-desc">
+                        <strong>Tugas Utama:</strong>
+                        <ul>
+                            <li>Sebagai pemateri HimatikaTalks tentang strategi untuk meraih Beasiswa.</li>
+                            <li>Mewadahi kepentingan akademik dan menjadi penghubung kemahasiswaan.</li>
+                            <li>Membantu anggota mencapai IPK yang baik.</li>
+                            <li>Pendataan anggota terancam DO & memberikan bantuan.</li>
+                            <li>Pendataan alumni S1 dan S2 Departemen Matematika.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 5: WORKING -->
+    <section id="working" class="content-section hidden-el from-bottom">
+        <h2 class="section-heading">Working <span class="text-neon">Experience</span></h2>
+        
+        <div class="work-container">
+            <!-- Kartu Pekerjaan: Diskominfo -->
+            <div class="work-item" id="work-card">
+                
+                <!-- TAMPILAN DEPAN (Keterangan & Kontribusi) -->
+                <!-- Klik dimana saja di area depan ini akan memunculkan galeri -->
+                <div class="work-front">
+                    <div class="work-header">
+                        <img src="assets/img/diskominfo.jpeg" alt="Diskominfo Logo" class="work-logo">
+                        <div class="work-info">
+                            <h3 class="work-title">Cyber Security</h3>
+                            <p class="work-company">Dinas Komunikasi dan Informatika (Diskominfo) Kota Makassar</p>
+                            <div class="work-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Januari 2025 - Juni 2025</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Makassar, Indonesia</span>
+                                <span><i class="fa-solid fa-briefcase"></i> Full-Time</span>
+                            </div>
+                        </div>
+                        <div class="work-toggle"><i class="fa-regular fa-images"></i> Lihat Galeri</div>
+                    </div>
+                    
+                    <div class="work-contributions">
+                        <h4 class="work-subtitle">CONTRIBUTIONS :</h4>
+                        <ul class="work-list">
+                            <li>Melakukan Analisis Kerentanan File Artefak</li>
+                            <li>Penanganan Laporan Bug Hunter</li>
+                            <li>Sebagai Manajer Proyek pada Aplikasi I-Ticketing</li>
+                            <li>Sebagai Quality Assurance (QA) pada Aplikasi I-Ticketing</li>
+                            <li>Melakukan Pemantauan CCTV Lorong Wisata</li>
+                            <li>Membuat Dashboard Analisis CCTV</li>
+                            <li>Berkontribusi sebagai Panitia Pelaksana Sayembara Nama Super Apps</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TAMPILAN BELAKANG (Hanya Galeri, Teks Hilang) -->
+                <div class="work-back">
+                    <div class="gallery-header-bar">
+                        <h4 class="work-subtitle m-0"><i class="fa-regular fa-images"></i> GALLERY : DISKOMINFO</h4>
+                        <button class="close-gallery-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                    </div>
+                    
+                    <!-- KONTINER TOMBOL GESER DAN GALERI -->
+                    <div class="gallery-slider-wrapper">
+                        <!-- Tombol Kiri -->
+                        <button class="gallery-nav-btn left-nav"><i class="fa-solid fa-chevron-left"></i></button>
+                        
+                        <div class="work-gallery" id="working-gallery-container">
+                            <img src="assets/img/kominfo/kominfo1.jpg" alt="Gallery 1">
+                            <img src="assets/img/kominfo/kominfo2.jpg" alt="Gallery 2">
+                            <img src="assets/img/kominfo/kominfo3.jpg" alt="Gallery 3">
+                            <img src="assets/img/kominfo/kominfo4.jpg" alt="Gallery 4">
+                            <img src="assets/img/kominfo/kominfo5.jpg" alt="Gallery 5">
+                            <img src="assets/img/kominfo/kominfo6.jpg" alt="Gallery 6">
+                            <img src="assets/img/kominfo/kominfo7.jpg" alt="Gallery 7">
+                            <img src="assets/img/kominfo/kominfo8.jpg" alt="Gallery 8">
+                            <img src="assets/img/kominfo/kominfo9.jpg" alt="Gallery 9">
+                            <img src="assets/img/kominfo/kominfo10.jpg" alt="Gallery 10">
+                        </div>
+
+                        <!-- Tombol Kanan -->
+                        <button class="gallery-nav-btn right-nav"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 6: PORTOFOLIO / PORTFOLIO SHOWCASE -->
+    <section id="portofolio" class="content-section hidden-el from-left">
+        <h2 class="section-heading text-center">Portfolio <span class="text-neon">Showcase</span></h2>
+        <p class="portfolio-subtitle">Explore my journey through projects, certifications, and skills.</p>
+        
+        <!-- Tab Navigasi Atas -->
+        <div class="portfolio-tabs">
+            <button class="tab-btn active" data-target="projects-tab">Projects</button>
+            <button class="tab-btn" data-target="certificates-tab">Certificates</button>
+            <button class="tab-btn" data-target="skills-tab">Skills</button>
+        </div>
+
+        <!-- KONTEN TAB 1: PROJECTS -->
+        <div class="portfolio-content-panel active" id="projects-tab">
+            <div class="achieve-grid porto-project-grid" style="max-width: 1200px; margin: 0 auto;">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/projects/rentalmobil/rental1.png" alt="Dashboard Stunting" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Sarfarez Rent Car</h3>
+                        <div class="project-year-badge">2023</div>
+                        <div class="project-buttons">
+                            <button class="btn-view-details" data-index="0"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</button>
+                            <a href="https://github.com/trismantegar48/FinalProject-PemrogramanWeb.git" target="_blank" class="btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/projects/imanqu/imanqu1.png" alt="IManQU Mobile App" class="project-img mobile-app-img">
+                    </div> 
+                    <div class="project-info">
+                        <h3 class="project-title">IManQU (Insan Membaca Quran)</h3>
+                        <div class="project-year-badge">2024</div>
+                        <div class="project-buttons">
+                            <button class="btn-view-details" data-index="1"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</button>
+                            <a href="https://github.com/trismantegar48/ProjectAkhir_PMC_ImanQu.git" target="_blank" class="btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/projects/pegawai/pegawai1.png" alt="I-Ticketing" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Website Manajemen Kepegawaian</h3>
+                        <div class="project-year-badge">2024</div>
+                        <div class="project-buttons">
+                            <button class="btn-view-details" data-index="2"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</button>
+                            <a href="https://github.com/trismantegar48/FinalProject_WebLanjutanA-2024.git" target="_blank" class="btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Tersembunyi) -->
+                <div class="project-card hidden-porto-project">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/projects/trashorter/trashorter1.jpg" alt="Sapa Ladoma" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">TrashSorter - Organic and Anorganic Waste Classification</span></h3>
+                        <div class="project-year-badge">2024</div>
+                        <div class="project-buttons">
+                            <button class="btn-view-details" data-index="3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</button>
+                            <a href="https://github.com/trismantegar48/Trashorter_Kelompok14.git" target="_blank" class="btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="assets/img/projects/trashorter/trashorter3.pdf" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Tersembunyi) -->
+                <div class="project-card hidden-porto-project">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/projects/wtb/wtb1.png" alt="CCTV Dashboard" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Makkitaki <span class="project-subtitle">(Mari Kita Kenali Kelurahan Watang Bacukiki)</span></h3>
+                        <div class="project-year-badge">2025</div>
+                        <div class="project-buttons">
+                            <button class="btn-view-details" data-index="4"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</button>
+                            <a href="https://github.com/trismantegar48/makkitakiweb.git" target="_blank" class="btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 (Tersembunyi) -->
+                <div class="project-card hidden-porto-project">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/projects/stunting/stunting1.png" alt="E-Commerce System" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Barru Stunting Prediction</h3>
+                        <div class="project-year-badge">2026</div>
+                        <div class="project-buttons">
+                            <button class="btn-view-details" data-index="5"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</button>
+                            <a href="https://github.com/trismantegar48/barrustunting_prediciton.git" target="_blank" class="btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="assets/img/projects/stunting/stunting7.pdf" target="_blank" class="btn-pdf"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tombol Show More khusus Project -->
+            <div class="achieve-btn-wrapper">
+                <button id="show-more-projects-btn" class="btn-more" type="button">Lihat Lebih Banyak Project ▼</button>
+            </div>
+        </div>
+
+        <!-- KONTEN TAB 2: CERTIFICATES (Tampil 3 dulu, sisanya tersembunyi) -->
+        <div class="portfolio-content-panel" id="certificates-tab">
+            <div class="achieve-grid porto-achieve-grid" style="max-width: 1200px; margin: 0 auto;">
+                <!-- 3 Sertifikat Pertama (Selalu Tampil) -->
+                <div class="achieve-card">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert1.jpg" alt="Sertifikat 1" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">TOEFL ITP Score 567</h3>
+                        <p class="achieve-issuer">Webster English Course</p>
+                        <span class="achieve-year">2023</span>
+                    </div>
+                </div>
+                <div class="achieve-card">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert2.jpg" alt="Sertifikat 2" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Uji Kemahiran Bahasa Indonesia (UKBI) Skor 581</h3>
+                        <p class="achieve-issuer">Badan Pengembangan dan Pembinaan Bahasa</p>
+                        <span class="achieve-year">2023</span>
+                    </div>
+                </div>
+                <div class="achieve-card">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert3.jpg" alt="Sertifikat 3" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Microsoft Excel</h3>
+                        <p class="achieve-issuer">Goskills</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+
+                <!-- 6 Sertifikat Selanjutnya (Tersembunyi, Muncul Saat Tombol Ditekan) -->
+                <div class="achieve-card hidden-porto-cert">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert4.jpg" alt="Sertifikat 4" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Data Science</h3>
+                        <p class="achieve-issuer">Rakamin Academy</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+                <div class="achieve-card hidden-porto-cert">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert5.jpg" alt="Sertifikat 5" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Data Analytics</h3>
+                        <p class="achieve-issuer">Simplilearn</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+                <div class="achieve-card hidden-porto-cert">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert6.jpg" alt="Sertifikat 6" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Full Stack Web Development</h3>
+                        <p class="achieve-issuer">Rakamin Academy</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+                <div class="achieve-card hidden-porto-cert">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert7.jpg" alt="Sertifikat 7" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Artificial Intelligence</h3>
+                        <p class="achieve-issuer">Bisa.AI</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+                <div class="achieve-card hidden-porto-cert">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert8.jpg" alt="Sertifikat 8" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Machine Learning Using Python</h3>
+                        <p class="achieve-issuer">Simplilearn</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+                <div class="achieve-card hidden-porto-cert">
+                    <div class="achieve-img-wrapper"><img src="assets/img/sertifikasi/portocert9.jpg" alt="Sertifikat 9" class="cert-img"></div>
+                    <div class="achieve-info">
+                        <h3 class="achieve-title">Cyber Security</h3>
+                        <p class="achieve-issuer">Kata Suhu Kita</p>
+                        <span class="achieve-year">2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Show More khusus di dalam Tab Portofolio -->
+            <div class="achieve-btn-wrapper">
+                <button id="show-more-porto-certs-btn" class="btn-more" type="button">Lihat Lebih Banyak Sertifikasi ▼</button>
+            </div>
+        </div>
+
+        <!-- KONTEN TAB 3: TECH STACK -->
+        <div class="portfolio-content-panel" id="skills-tab">
+            <div class="tech-stack-grid">
+                <!-- 1. VSCode -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+                    <span>VSCode</span>
+                </div>
+                <!-- 2. Python -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <span>Python</span>
+                </div>
+                <!-- 3. Java -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <span>Java</span>
+                </div>
+                <!-- 4. HTML -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <!-- 5. CSS -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <!-- 6. JavaScript -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <!-- 7. Google Colab -->
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" alt="Colab">
+                    <span>Colab</span>
+                </div>
+                <!-- 8. Machine Learning -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-brain tech-icon-fa" style="color: #52c4ff;"></i>
+                    <span>Machine Learning</span>
+                </div>
+                <!-- 9. Deep Learning -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-network-wired tech-icon-fa" style="color: #ff5252;"></i>
+                    <span>Deep Learning</span>
+                </div>
+                <!-- 10. SQL -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                    <span>SQL</span>
+                </div>
+                <!-- 11. Android Studio -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
+                    <span>Android Studio</span>
+                </div>
+                <!-- 12. Unity -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity">
+                    <span>Unity</span>
+                </div>
+                <!-- 13. Blender -->
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender">
+                    <span>Blender</span>
+                </div>
+                <!-- 14. SmartPLS -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-chart-pie tech-icon-fa" style="color: #4ade80;"></i>
+                    <span>SmartPLS</span>
+                </div>
+                <!-- 15. Postman -->
+                <div class="tech-card">
+                    <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
+                    <span>Postman</span>
+                </div>
+                <!-- 16. Microsoft Word -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-file-word tech-icon-fa" style="color: #2b579a;"></i>
+                    <span>Microsoft Word</span>
+                </div>
+                <!-- 17. Microsoft Excel -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-file-excel tech-icon-fa" style="color: #217346;"></i>
+                    <span>Microsoft Excel</span>
+                </div>
+                <!-- 18. Microsoft PowerPoint -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-file-powerpoint tech-icon-fa" style="color: #d24726;"></i>
+                    <span>PowerPoint</span>
+                </div>
+                <!-- 19. Microsoft Power BI -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-chart-column tech-icon-fa" style="color: #f2c811;"></i>
+                    <span>Power BI</span>
+                </div>
+                <!-- 20. Tableau -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-chart-line tech-icon-fa" style="color: #e9573f;"></i>
+                    <span>Tableau</span>
+                </div>
+                <!-- 21. Canva -->
+                <div class="tech-card">
+                    <i class="fa-solid fa-palette tech-icon-fa" style="color: #00c4cc;"></i>
+                    <span>Canva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 7: ACHIEVEMENT -->
+    <section id="achievement" class="content-section hidden-el from-bottom">
+        <h2 class="section-heading">My <span class="text-neon">Achievement</span></h2>
+        
+        <div class="achieve-grid">
+            <!-- BARIS 1 (Tampil Otomatis: 4 Sertifikat) -->
+            <div class="achieve-card">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert1.jpg" alt="Sertifikat 1" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">2nd Runner Up Ucmas International Abacus Competition 2023 Category Visual H (Quick Count)</h3>
+                    <p class="achieve-issuer">Ucmas International</p>
+                    <span class="achieve-year">2023</span>
+                </div>
+            </div>
+            <div class="achieve-card">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert2.jpg" alt="Sertifikat 2" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Bronze Cup Ucmas World Cup Abacus Competition for Indonesian Team</h3>
+                    <p class="achieve-issuer">Ucmas International</p>
+                    <span class="achieve-year">2023</span>
+                </div>
+            </div>
+            <div class="achieve-card">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert3.jpg" alt="Sertifikat 3" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Merit (Harapan 2) Ucmas International Abacus Competition 2023 Category Flash Calculation</h3>
+                    <p class="achieve-issuer">Ucmas International</p>
+                    <span class="achieve-year">2023</span>
+                </div>
+            </div>
+            <div class="achieve-card">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert4.jpg" alt="Sertifikat 4" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Grand Champion (Juara 1) Olimpiade Aritmatika Sempoa Nasional 2023 Kategori Flash Calculation C</h3>
+                    <p class="achieve-issuer">Ucmas Indonesia</p>
+                    <span class="achieve-year">2023</span>
+                </div>
+            </div>
+
+            <!-- BARIS SELANJUTNYA (Tersembunyi, Muncul Saat Tombol Ditekan: 7 Sertifikat) -->
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert5.jpg" alt="Sertifikat 5" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Juara Merit (Harapan) Olimpiade Aritmatika Sempoa Nasional 2023 Kategori Visual Grand Level (Hitung Cepat)</h3>
+                    <p class="achieve-issuer">Ucmas Indonesia</p>
+                    <span class="achieve-year">2023</span>
+                </div>
+            </div>
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert6.jpg" alt="Sertifikat 6" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Runner Up 1 (Juara 2) Olimpiade Aritmatika Sempoa Nasional 2023 Kategori Listening Calculation C</h3>
+                    <p class="achieve-issuer">Ucmas Indonesia</p>
+                    <span class="achieve-year">2023</span>
+                </div>
+            </div>
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert7.jpg" alt="Sertifikat 7" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Grand Champion (Juara 1) Olimpiade Aritmatika Sempoa Nasional 2024 Kategori Listening Calculation Senior</h3>
+                    <p class="achieve-issuer">Ucmas Indonesia</p>
+                    <span class="achieve-year">2024</span>
+                </div>
+            </div>
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert8.jpg" alt="Sertifikat 8" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">1st Runner Up (Juara 2) Olimpiade Artimatika Sempoa Nasional 2024 Kategori Grand Level</h3>
+                    <p class="achieve-issuer">Ucmas Indonesia</p>
+                    <span class="achieve-year">2024</span>
+                </div>
+            </div>
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert9.jpg" alt="Sertifikat 9" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">1st Runner Up (Juara 2) Olimpiade Artimatika Sempoa Nasional 2024 Kategori Flash Calculation Senior</h3>
+                    <p class="achieve-issuer">Ucmas Indonesia</p>
+                    <span class="achieve-year">2024</span>
+                </div>
+            </div>
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert10.jpg" alt="Sertifikat 10" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Mahasiswa Berprestasi Tingkat Fakultas MIPA</h3>
+                    <p class="achieve-issuer">Fakultas MIPA</p>
+                    <span class="achieve-year">2024</span>
+                </div>
+            </div>
+            <div class="achieve-card hidden-cert">
+                <div class="achieve-img-wrapper"><img src="assets/img/sertifikat/cert11.jpg" alt="Sertifikat 11" class="cert-img"></div>
+                <div class="achieve-info">
+                    <h3 class="achieve-title">Mahasiswa Berprestasi Tingkat Program Studi Sistem Informasi</h3>
+                    <p class="achieve-issuer">Departemen Matematika FMIPA Unhas</p>
+                    <span class="achieve-year">2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Show More -->
+        <div class="achieve-btn-wrapper">
+            <button id="show-more-achieve-btn" class="btn-more">Lihat Lebih Banyak Prestasi ▼</button>
+        </div>
+    </section> <!-- INI ADALAH PENUTUP HALAMAN ACHIEVEMENT -->
+
+    <!-- Halaman 8: CONTACT -->
+    <section id="contact" class="content-section hidden-el from-bottom">
+        <h2 class="section-heading text-center">Contact <span class="text-neon">Me</span></h2>
+        <p class="portfolio-subtitle">Let’s connect and create something extraordinary together.</p>
+        
+        <div class="contact-layout">
+            <!-- Sisi Kiri: Info Kontak -->
+            <div class="contact-info-list">
+                
+                <!-- 1. Email (Langsung membuka aplikasi email) -->
+                <a href="mailto:wtrismantegar@gmail.com" class="info-item" style="text-decoration: none;">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>wtrismantegar@gmail.com</p>
+                    </div>
+                </a>
+                
+                <!-- 2. WhatsApp (Langsung membuka chat WA) -->
+                <a href="https://wa.me/6282192746670" target="_blank" class="info-item" style="text-decoration: none;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>+62 821-9274-6670</p>
+                    </div>
+                </a>
+                
+                <!-- 3. Location (Tetap berupa teks biasa, tidak bisa diklik) -->
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Makassar 90222, Indonesia</p>
+                    </div>
+                </div>
+                
+                <!-- 4. LinkedIn (Langsung membuka profil) -->
+                <a href="https://www.linkedin.com/in/trismanttw" target="_blank" class="info-item" style="text-decoration: none;">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>www.linkedin.com/in/trismanttw</p>
+                    </div>
+                </a>
+                
+                <!-- 5. Instagram (Langsung membuka profil) -->
+                <a href="https://www.instagram.com/_trismanttw_" target="_blank" class="info-item" style="text-decoration: none;">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <h4>Instagram</h4>
+                        <p>@_trismanttw_</p>
+                    </div>
+                </a>
+                
+            </div>
+
+            <!-- Sisi Kanan: Animasi HP 3D -->
+            <div class="phone-mockup-wrapper">
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div> <!-- Poni Kamera HP -->
+                    <div class="phone-screen">
+                        <!-- PASTIKAN ANDA MENGGANTI src DENGAN LOKASI FOTO ASLI ANDA -->
+                        <img src="assets/img/trisman1.jpeg" class="phone-slide active" alt="Foto Trisman 1">
+                        <img src="assets/img/trisman2.jpeg" class="phone-slide" alt="Foto Trisman 2">
+                        <img src="assets/img/trisman3.jpeg" class="phone-slide" alt="Foto Trisman 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- KODE MODAL POP-UP HARUS BERADA DI SINI (Di luar section)-->
+    <!-- ======================================================= -->
+    <!-- 1. Modal Pop-up untuk memperbesar Gambar/Sertifikat (Sudah ada sebelumnya) -->
+    <div id="image-modal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="expanded-img">
+    </div>
+
+    <!-- 2. MODAL VIEW DETAILS PROJECT (TARUH DI SINI) -->
+    <div id="project-modal" class="image-modal project-details-modal">
+        <div class="project-modal-window">
+            <!-- Header Jendela ala macOS -->
+            <div class="modal-window-header">
+                <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="window-title" id="modal-win-title">Project Details</div>
+                <span class="close-project-modal">&times;</span>
+            </div>
+            
+            <!-- Isi Jendela (Split Layout: Kiri Carousel, Kanan Teks) -->
+            <div class="modal-window-body">
+                <!-- Sisi Kiri: Gambar Carousel & Tombol Source Code -->
+                <div class="modal-carousel-section">
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" id="carousel-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-images-track" id="carousel-track">
+                                <!-- 5 Gambar akan dimasukkan otomatis via JavaScript -->
+                            </div>
+                        </div>
+                        <button class="carousel-btn next-btn" id="carousel-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    
+                    <!-- Tombol Source Code (Tanpa Live Demo) -->
+                    <div class="modal-action-buttons">
+                        <a href="#" id="modal-github-btn" target="_blank" class="btn-github-code">
+                            <i class="fa-brands fa-github"></i> Source Code
+                        </a>
+
+                        <a href="#" id="modal-pdf-btn" target="_blank" class="btn-pdf-download" style="display: none;">
+                            <i class="fa-solid fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Tentang Proyek & Teknologi Utama -->
+                <div class="modal-content-section">
+                    <h3 class="modal-section-heading">Tentang Projects</h3>
+                    <p id="modal-desc-text" class="modal-desc"></p>
+                    
+                    <h3 class="modal-section-heading" style="margin-top: 25px;">Teknologi Utama</h3>
+                    <div class="modal-tech-badges" id="modal-tech-container">
+                        <!-- Badges warna-warni dimuat via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === FOOTER === -->
+    <footer class="portfolio-footer">
+        <div class="footer-container">
+            <!-- Sisi Kiri: Hak Cipta -->
+            <div class="footer-left">
+                &copy; Trisman Tegar Wiratama. Hak cipta dilindungi.
+            </div>
+            
+            <!-- Sisi Kanan: Motivasi & Nama -->
+            <div class="footer-right">
+                <p class="footer-quote">
+                    "Tidak ada hidup tanpa masalah, dan tidak ada usaha tanpa rasa lelah. Tetap semangat sampai bismillah menjadi alhamdulillah."
+                </p>
+                <p class="footer-author">
+                    - <span class="tris-blue">Tris</span><span class="man-white">man</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script diletakkan paling bawah sebelum penutup body -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
