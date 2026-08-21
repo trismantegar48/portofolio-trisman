@@ -119,7 +119,7 @@ window.addEventListener("scroll", () => {
 // === 5. ANIMASI ELEMEN MUNCUL & PEMICU NGETIK ===
 const observerOptions = {
     root: null,
-    rootMargin: '0px 0px 150px 0px', // PERBAIKAN: Diperluas 150px ke bawah agar tombol tidak telat muncul
+    rootMargin: '0px 0px 300px 0px', // KUNCI PERBAIKAN: Diperbesar ke 300px agar sensor lebih sensitif
     threshold: 0
 };
 
