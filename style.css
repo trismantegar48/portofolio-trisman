@@ -1645,9 +1645,27 @@ img.mobile-app-img {
     }
 
     /* 6. MODAL WINDOW: Merapikan tombol Source Code & PDF di dalam jendela Pop-up */
+    
+    /* === KUNCI 1: Mengunci tinggi maksimal bingkai jendela macOS === */
+    .project-modal-window {
+        max-height: 85vh !important; 
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* === KUNCI 2: Menyalakan scroll pada bagian isi jendela === */
     .modal-window-body {
         padding: 20px;
+        overflow-y: auto !important; 
+        -webkit-overflow-scrolling: touch; /* Kelancaran scroll di HP */
     }
+
+    /* === KUNCI 3: Menyembunyikan batang scroll agar tetap estetik === */
+    .modal-window-body::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
     .modal-action-buttons {
         flex-direction: column;
         width: 100%;
