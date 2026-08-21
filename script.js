@@ -1,7 +1,13 @@
 // === 1. KURSOR KUSTOM ===
 const cursor = document.getElementById("custom-cursor");
 window.addEventListener("mousemove", (e) => {
+    cursor.style.opacity = "1"; // KUNCI 2: Munculkan kursor saat mouse mulai bergerak
     cursor.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
+});
+
+// Tambahan opsional: Sembunyikan kursor jika mouse keluar dari layar browser
+window.addEventListener("mouseout", () => {
+    cursor.style.opacity = "0";
 });
 
 // === 2. EFEK MENGETIK WELCOME SCREEN ===

@@ -15,6 +15,10 @@
 }
 
 body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important; 
+    position: relative;
     background-color: var(--bg-dark);
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -29,7 +33,7 @@ body {
 }
 
 .global-glow {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     box-shadow: inset 0 0 150px rgba(82, 196, 255, 0.15);
     pointer-events: none; z-index: 9998; 
 }
@@ -38,7 +42,8 @@ body {
     position: fixed; top: 0; left: 0; width: 30px; height: 30px;
     border-radius: 50%; border: 2px solid var(--neon-blue); 
     background-color: rgba(82, 196, 255, 0.15); 
-    pointer-events: none; z-index: 9999; 
+    pointer-events: none; z-index: 9999;
+    opacity: 0;
     transition: transform 0.08s ease-out; 
 }
 
@@ -84,16 +89,24 @@ body {
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
 
 .home-section {
-    min-height: 100vh; padding: 120px 10% 40px 10%;
-    display: flex; align-items: center; justify-content: space-between;
+    min-height: 100vh; 
+    padding: 90px 10% 40px 10%;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
 }
 .home-content { max-width: 650px; }
-.available-badge { font-family: monospace; font-size: 0.8rem; color: var(--text-secondary-color); margin-bottom: 20px; letter-spacing: 1px; }
+.available-badge { 
+    font-family: monospace; 
+    font-size: 0.8rem; 
+    color: var(--text-secondary-color); 
+    margin-bottom: 15px; 
+    letter-spacing: 1px; }
 .hero-title { 
     font-family: 'Syncopate', sans-serif; 
     font-size: 3.2rem;
     line-height: 1.2;
-    margin-bottom: 15px; 
+    margin-bottom: 5px; 
 }
 .text-white { color: #ffffff; }
 .text-neon { color: var(--neon-blue); }
@@ -105,14 +118,14 @@ body {
     }
 }
 
-.subtitle { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--neon-blue); margin-bottom: 20px; min-height: 35px; font-weight: 700; }
+.subtitle { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--neon-blue); margin-bottom: 15px; min-height: 35px; font-weight: 700; }
 .subtitle-cursor { display: inline-block; width: 3px; height: 1.6rem; background-color: var(--neon-blue); vertical-align: middle; animation: blink 0.8s infinite; margin-left: 5px; }
 
-.description { color: #888888; line-height: 1.6; margin-bottom: 30px; font-size: 0.95rem; }
+.description { color: #888888; line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem; }
 .tags-container { display: flex; gap: 15px; margin-bottom: 30px; }
 .tag { padding: 8px 20px; border: 1px solid #222; border-radius: 20px; font-size: 0.8rem; color: #aaa; background: rgba(0,0,0,0.5); }
 
-.social-icons { display: flex; gap: 15px; margin-bottom: 35px; }
+.social-icons { display: flex; gap: 15px; margin-bottom: 25px; }
 .social-icons a { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); color: #e0e0e0; font-size: 1.1rem; transition: 0.3s; text-decoration: none; background: rgba(255,255,255,0.02); }
 .social-icons a:hover { border-color: var(--neon-blue); color: var(--neon-blue); box-shadow: 0 0 10px rgba(82, 196, 255, 0.3); transform: translateY(-3px); }
 
@@ -936,10 +949,10 @@ body {
 /* === ANIMASI OMBAK BACKGROUND === */
 .wave-container {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     z-index: -2; /* KUNCI 1: Memastikan ombak berada di layar paling belakang */
     pointer-events: none; /* KUNCI 2: Memastikan ombak tidak bisa diklik dan tidak menghalangi tombol */
@@ -983,8 +996,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -3; /* Berada di paling belakang, bahkan di belakang ombak */
     pointer-events: none; /* Tidak bisa diklik/disentuh */
     overflow: hidden;
@@ -1233,7 +1246,7 @@ section {
     justify-content: center !important;
     width: 100%;
     overflow-anchor: none; 
-    padding-bottom: 0px !important;
+    padding-bottom: 100px !important;
 }
 
 .contact-layout {
@@ -1368,17 +1381,21 @@ section {
 
 /* Responsif untuk HP Sungguhan */
 @media (max-width: 900px) {
-    .contact-layout { flex-direction: column; gap: 60px; }
+    .contact-layout { flex-direction: column; gap: 60px; margin-top: 15px; }
     .phone-mockup { transform: none; } /* Matikan miring 3D di HP agar muat */
 }
 
 /* === GAYA FOOTER === */
 .portfolio-footer {
-    background: #0a0a0c; 
+    background: rgba(10, 10, 12, 0.3); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
     border-top: 1px solid rgba(82, 196, 255, 0.1); 
     padding: 30px 20px;
     margin-top: auto; 
-    width: 100%;
+    
+    width: 100% !important;
+    box-sizing: border-box !important;
     position: relative;
     z-index: 10;
 }
@@ -1624,6 +1641,7 @@ img.mobile-app-img {
     }
     .contact-info-list .info-item:nth-child(5) {
         grid-column: 1 / span 1 !important; 
+        justify-self: start !important;
     }
 
     /* 6. MODAL WINDOW: Merapikan tombol Source Code & PDF di dalam jendela Pop-up */
@@ -1642,11 +1660,40 @@ img.mobile-app-img {
     .btn-github-code {
         justify-content: center;
     }
+
+    /* 7. HEADING: Mengecilkan Judul Halaman di HP agar tidak terpotong */
+    .section-heading {
+        font-size: 1.4rem !important; 
+        letter-spacing: 0px !important; 
+        padding: 0 10px; 
+        word-wrap: break-word; 
+    }
 }
 
 /* Penyesuaian Ekstra untuk Layar HP yang sangat kecil (Lebar max 480px) */
 @media (max-width: 480px) {
     .tech-card {
         width: calc(50% - 13px) !important; /* Berubah jadi 2 kolom agar ikon tidak gepeng */
+    }
+}
+
+/* ======================================================= */
+/*          === ANTI-GESER KANAN DI HP ============ */
+/* ======================================================= */
+
+/* 1. Kunci setiap ruangan agar elemen yang menonjol langsung dipotong */
+section, footer {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+}
+
+/* 2. Tarik masuk tombol panah galeri yang sebelumnya menonjol keluar 15px */
+@media (max-width: 768px) {
+    .gallery-nav-btn.right-nav { 
+        right: 10px !important; 
+    }
+    .gallery-nav-btn.left-nav { 
+        left: 10px !important; 
     }
 }
