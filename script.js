@@ -1,13 +1,33 @@
 // === 1. KURSOR KUSTOM ===
 const cursor = document.getElementById("custom-cursor");
+let firstMove = true; // Penanda untuk pergerakan pertama
+
 window.addEventListener("mousemove", (e) => {
-    cursor.style.opacity = "1"; // KUNCI 2: Munculkan kursor saat mouse mulai bergerak
-    cursor.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
+    if (firstMove) {
+        // 1. Matikan efek transisi sementara agar kursor tidak "terbang"
+        cursor.style.transition = "none";
+        
+        // 2. Langsung pindahkan (snap) kursor secara instan ke posisi mouse
+        cursor.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
+        
+        // 3. Nyalakan kembali transisinya, lalu munculkan kursornya
+        setTimeout(() => {
+            cursor.style.transition = "transform 0.08s ease-out, opacity 0.3s ease";
+            cursor.style.opacity = "1";
+        }, 10);
+        
+        firstMove = false; // Matikan penanda agar kode ini tidak diulang terus
+    } else {
+        // Pergerakan mouse selanjutnya berjalan normal dengan animasi
+        cursor.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`;
+        cursor.style.opacity = "1";
+    }
 });
 
-// Tambahan opsional: Sembunyikan kursor jika mouse keluar dari layar browser
+// Sembunyikan kursor saat mouse keluar layar, dan reset penandanya
 window.addEventListener("mouseout", () => {
     cursor.style.opacity = "0";
+    firstMove = true; // Reset agar saat masuk layar lagi tidak terbang dari pojok
 });
 
 // === 2. EFEK MENGETIK WELCOME SCREEN ===
