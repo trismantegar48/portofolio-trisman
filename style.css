@@ -1761,31 +1761,32 @@ section, footer {
 /* === MENGOMPRES HALAMAN PORTOFOLIO AGAR PAS 1 LAYAR === */
 /* ======================================================= */
 
-/* 1. Tarik halaman ke atas mendekati Navbar */
+/* 1. Tarik halaman lebih ke atas lagi mendekati Navbar */
 #portofolio { 
     justify-content: flex-start !important;
-    padding-top: 90px !important;
-    padding-bottom: 20px !important;
+    padding-top: 75px !important; /* Diperkecil dari 90px ke 75px */
+    padding-bottom: 10px !important; /* Diperkecil agar bawah tidak terlalu kosong */
 }
 
-/* 2. Pangkas jarak kosong (margin) antar elemen agar lebih padat */
+/* 2. Pangkas jarak kosong (margin) dengan lebih ekstrem */
 #portofolio .section-heading {
-    margin-bottom: 5px !important; 
+    margin-bottom: 0px !important; /* Jarak judul dihilangkan */
 }
 #portofolio p {
-    margin-bottom: 15px !important; 
+    margin-bottom: 10px !important; /* Diperkecil dari 15px */
+    font-size: 0.9rem; /* Sedikit mengecilkan teks deskripsi */
 }
 .portfolio-tabs {
-    margin-bottom: 20px !important; 
+    margin-bottom: 15px !important; /* Diperkecil dari 20px */
 }
 
-/* 3. Langsingkan kartu proyek dengan sedikit mengurangi tinggi gambar */
+/* 3. Langsingkan lagi gambar dan ruang teks di kartu proyek */
 .project-img {
-    height: 160px !important; 
+    height: 140px !important; /* Dipendekkan dari 160px ke 140px */
 }
 .project-info {
-    padding: 15px 20px !important; 
-} /* <--- KUNCI: Kurung kurawal penutup ini yang tadi hilang! */
+    padding: 12px 15px !important; /* Ruang kosong di dalam kartu diperkecil */
+}
 
 /* 4. Langsingkan juga kartu Sertifikat (Versi Akurat) */
 .achieve-img-wrapper {
