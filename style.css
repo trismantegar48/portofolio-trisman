@@ -232,12 +232,19 @@ body {
 /* === GAYA BARU HALAMAN EDUCATION (ACCORDION) === */
 .edu-container { display: flex; flex-direction: column; gap: 20px; }
 .edu-item { 
-    background: rgba(255,255,255,0.02); border: 1px solid rgba(255, 255, 255, 0.05); 
-    border-radius: 15px; overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s; 
+    background: rgba(255,255,255,0.02); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: all 0.3s ease; 
 }
 .edu-item:hover { 
-    border-color: rgba(82, 196, 255, 0.3); box-shadow: 0 5px 20px rgba(82, 196, 255, 0.05); 
+    border: 1px solid var(--neon-blue) !important; 
+    background: rgba(82, 196, 255, 0.02) !important; 
+    box-shadow: 0 15px 30px rgba(82, 196, 255, 0.15) !important; 
+    transform: translateY(-10px) !important; 
 }
+
 .edu-header { display: flex; align-items: center; padding: 25px; cursor: pointer; }
 .edu-logo { width: 60px; height: 60px; object-fit: contain; margin-right: 25px; border-radius: 5px; }
 .edu-info { flex: 1; display: flex; flex-direction: column; gap: 6px; }
@@ -434,6 +441,37 @@ body {
 
 /* --- TAMPILAN DEPAN --- */
 .work-front { transition: 0.3s ease; } /* cursor: pointer dihapus agar kartu tidak bisa diklik */
+
+/* --- TAMPILAN DEPAN --- */
+.work-front { 
+    transition: 0.3s ease; 
+    border: 1px solid transparent; /* KUNCI: Garis tak terlihat agar kartu tidak 'goyang' saat di-hover */
+    border-radius: 12px; /* Menjaga sudut kartu tetap melengkung rapi */
+} 
+
+/* === PEMBUNGKUS KARTU UTAMA === */
+.work-item {
+    transition: 0.3s ease;
+    border: 1px solid transparent; /* Memberi ruang batas transparan */
+    border-radius: 12px; /* Sesuaikan jika sudut lengkung Anda berbeda */
+    overflow: hidden; /* Mencegah isi kartu tumpah keluar dari sudut lengkung */
+}
+
+/* === PERBAIKAN POSISI HALAMAN WORKING === */
+#working {
+    justify-content: flex-start !important; 
+    padding-top: 85px !important; /* KUNCI: Kita kurangi drastis dari 130px menjadi 85px agar judul naik */
+    padding-bottom: 20px !important; /* Kurangi ruang kosong di bawah */
+}
+
+/* === EFEK MENYALA UNTUK SELURUH KARTU (DEPAN & BELAKANG) === */
+.work-item:hover {
+    border: 1px solid var(--neon-blue) !important;
+    background: rgba(82, 196, 255, 0.02) !important;
+    box-shadow: 0 15px 30px rgba(82, 196, 255, 0.15) !important; 
+    transform: translateY(-10px) !important;
+}
+
 .work-toggle:hover { background: var(--neon-blue); color: var(--bg-dark); box-shadow: 0 0 10px rgba(82, 196, 255, 0.3); }
 
 .work-header { display: flex; align-items: center; padding: 25px 30px; }
@@ -454,7 +492,6 @@ body {
     transition: 0.3s; font-weight: 600; 
     cursor: pointer; /* Kursor (jari telunjuk) hanya muncul saat di-hover ke tombol ini */
 }
-.work-front:hover .work-toggle { background: var(--neon-blue); color: var(--bg-dark); }
 
 .work-contributions { padding: 0 30px 30px 125px; }
 .work-subtitle { color: #ddd; font-size: 0.85rem; letter-spacing: 1.5px; margin-bottom: 15px; font-weight: 600;}
@@ -1718,4 +1755,52 @@ section, footer {
     .gallery-nav-btn.left-nav { 
         left: 10px !important; 
     }
+}
+
+/* ======================================================= */
+/* === MENGOMPRES HALAMAN PORTOFOLIO AGAR PAS 1 LAYAR === */
+/* ======================================================= */
+
+/* 1. Tarik halaman ke atas mendekati Navbar */
+#portofolio { 
+    justify-content: flex-start !important;
+    padding-top: 90px !important;
+    padding-bottom: 20px !important;
+}
+
+/* 2. Pangkas jarak kosong (margin) antar elemen agar lebih padat */
+#portofolio .section-heading {
+    margin-bottom: 5px !important; 
+}
+#portofolio p {
+    margin-bottom: 15px !important; 
+}
+.portfolio-tabs {
+    margin-bottom: 20px !important; 
+}
+
+/* 3. Langsingkan kartu proyek dengan sedikit mengurangi tinggi gambar */
+.project-img {
+    height: 160px !important; 
+}
+.project-info {
+    padding: 15px 20px !important; 
+} /* <--- KUNCI: Kurung kurawal penutup ini yang tadi hilang! */
+
+/* 4. Langsingkan juga kartu Sertifikat (Versi Akurat) */
+.achieve-img-wrapper {
+    height: 160px !important; /* KUNCI: Memendekkan kotak putih pembungkusnya */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.cert-img {
+    height: auto !important;
+    max-height: 100% !important; /* Memastikan gambar menyesuaikan ukuran kotak putih */
+    object-fit: contain !important; /* Menjaga agar sertifikat tidak gepeng/peyang */
+}
+
+.achieve-info {
+    padding: 15px 20px !important; /* Mengurangi ruang kosong di area teks */
 }
