@@ -323,12 +323,11 @@ if(showMorePortoBtn && portoAchieveGrid) {
         } else {
             showMorePortoBtn.innerHTML = 'Lihat Lebih Banyak Sertifikasi ▼';
             
-            // Perbaikan: Targetkan langsung ke tulisan Judul Section
-            const target = document.querySelector('#portofolio .section-heading');
-            const navbarHeight = document.getElementById('navbar').offsetHeight || 80;
-            if(target) {
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-                window.scrollTo({ top: targetPosition - navbarHeight - 20, behavior: 'smooth' });
+            // KUNCI PERBAIKAN: Scroll santai ke seluruh blok '#portofolio'
+            const targetSection = document.getElementById('portofolio');
+            if(targetSection) {
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
         }
     });
@@ -350,12 +349,11 @@ if(showMoreAchieveBtn && mainAchieveGrid) {
         } else {
             showMoreAchieveBtn.innerHTML = 'Lihat Lebih Banyak Prestasi ▼';
             
-            // Perbaikan: Targetkan langsung ke tulisan Judul Section
-            const target = document.querySelector('#achievement .section-heading');
-            const navbarHeight = document.getElementById('navbar').offsetHeight || 80;
-            if(target) {
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-                window.scrollTo({ top: targetPosition - navbarHeight - 20, behavior: 'smooth' });
+            // KUNCI PERBAIKAN: Scroll santai ke seluruh blok '#achievement'
+            const targetSection = document.getElementById('achievement');
+            if(targetSection) {
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
         }
     });
@@ -377,12 +375,11 @@ if(showMoreProjectsBtn && projectGrid) {
         } else {
             showMoreProjectsBtn.innerHTML = 'Lihat Lebih Banyak Project ▼';
             
-            // Perbaikan: Targetkan langsung ke tulisan Judul Section
-            const target = document.querySelector('#portofolio .section-heading');
-            const navbarHeight = document.getElementById('navbar').offsetHeight || 80;
-            if(target) {
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-                window.scrollTo({ top: targetPosition - navbarHeight - 20, behavior: 'smooth' });
+            // KUNCI PERBAIKAN: Scroll santai ke seluruh blok '#portofolio'
+            const targetSection = document.getElementById('portofolio');
+            if(targetSection) {
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
         }
     });

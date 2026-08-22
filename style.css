@@ -67,26 +67,53 @@ body {
     height: 100vh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; text-align: center;
 }
-.icons-wrapper { display: flex; gap: 15px; margin-bottom: 25px; }
+/* === ELEMEN WELCOME SCREEN (DIPERBESAR UNTUK LAPTOP) === */
+.icons-wrapper { 
+    display: flex; gap: 25px; 
+    margin-bottom: 40px; 
+}
 .icon-circle {
-    width: 45px; height: 45px; border-radius: 50%;
+    width: 65px; height: 65px; border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.2); 
     display: flex; justify-content: center; align-items: center;
     background-color: rgba(255, 255, 255, 0.03); 
-    font-size: 16px; color: #e0e0e0; transition: 0.3s;
+    font-size: 22px; color: #e0e0e0; transition: 0.3s;
 }
-.icon-circle:hover { border-color: var(--neon-blue); color: var(--neon-blue); box-shadow: 0 0 15px rgba(82, 196, 255, 0.4); }
-.main-title { font-family: 'Syncopate', sans-serif; font-size: 3rem; line-height: 1.3; letter-spacing: 2px; margin-bottom: 30px; min-height: 120px; }
-.cursor { display: inline-block; width: 4px; height: 3rem; background-color: white; vertical-align: bottom; animation: blink 0.8s infinite; }
+.icon-circle:hover { 
+    border-color: var(--neon-blue); color: var(--neon-blue); 
+    box-shadow: 0 0 15px rgba(82, 196, 255, 0.4); 
+}
+
+.main-title { 
+    font-family: 'Syncopate', sans-serif; 
+    font-size: 4.5rem; line-height: 1.3; 
+    letter-spacing: 4px; margin-bottom: 40px; 
+    min-height: 180px; 
+}
+.cursor { 
+    display: inline-block; width: 6px; 
+    height: 4.5rem; background-color: white; 
+    vertical-align: bottom; animation: blink 0.8s infinite; 
+}
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 .scroll-indicator { 
-    display: inline-block; margin-top: 50px; font-size: 0.8rem; 
-    color: var(--text-secondary-color); letter-spacing: 3px; 
-    animation: bounce 2s infinite; text-decoration: none; transition: 0.3s;
+    display: inline-block; margin-top: 70px; 
+    font-size: 1.2rem; color: var(--text-secondary-color); 
+    letter-spacing: 6px; animation: bounce 2s infinite; 
+    text-decoration: none; transition: 0.3s;
 }
 .scroll-indicator:hover { color: var(--neon-blue); }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+
+/* === KUNCI PENTING: MENCEGAH UKURAN RAKSASA DI LAYAR HP === */
+@media (max-width: 768px) {
+    .icons-wrapper { gap: 15px; margin-bottom: 25px; }
+    .icon-circle { width: 45px; height: 45px; font-size: 16px; }
+    .main-title { font-size: 2.2rem; min-height: 100px; letter-spacing: 1px; }
+    .cursor { height: 2.2rem; }
+    .scroll-indicator { font-size: 0.85rem; margin-top: 40px; letter-spacing: 3px; }
+}
 
 .home-section {
     min-height: 100vh; 
@@ -1804,4 +1831,326 @@ section, footer {
 
 .achieve-info {
     padding: 15px 20px !important; /* Mengurangi ruang kosong di area teks */
+}
+
+/* ======================================================= */
+/* === PERBESARAN HALAMAN HOME UNTUK LAYAR LAPTOP/PC === */
+/* ======================================================= */
+
+/* 1. Memperlebar ruang teks */
+.home-content { max-width: 800px !important; } 
+
+/* 2. Memperbesar lencana dan teks judul utama */
+.available-badge { font-size: 1rem !important; margin-bottom: 25px !important; }
+.hero-title { font-size: 4.2rem !important; line-height: 1.15 !important; margin-bottom: 10px !important; }
+
+/* 3. Memperbesar efek ketikan mesin tik */
+.subtitle { font-size: 2.8rem !important; margin-bottom: 20px !important; min-height: 45px !important; }
+.subtitle-cursor { height: 2.2rem !important; }
+
+/* 4. Memperbesar teks paragraf deskripsi */
+.description { font-size: 1.15rem !important; line-height: 1.8 !important; margin-bottom: 35px !important; }
+
+/* 5. Memperbesar ikon media sosial */
+.social-icons { gap: 20px !important; margin-bottom: 40px !important; }
+.social-icons a { width: 50px !important; height: 50px !important; font-size: 1.4rem !important; }
+
+/* 6. Memperbesar ukuran tombol Download CV & Lihat Karya */
+.btn { padding: 15px 35px !important; font-size: 1rem !important; border-radius: 40px !important; }
+
+/* 7. Memperbesar ukuran ID Card (Foto Profil 3D) */
+.strap { height: 160px !important; } 
+.id-card { width: 300px !important; height: 400px !important; padding: 15px !important; }
+
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    .home-content { max-width: 100% !important; }
+    .available-badge { font-size: 0.8rem !important; margin-bottom: 15px !important; }
+    .hero-title { font-size: 2.2rem !important; line-height: 1.2 !important; }
+    .subtitle { font-size: 1.8rem !important; min-height: 35px !important; }
+    .subtitle-cursor { height: 1.4rem !important; }
+    .description { font-size: 0.95rem !important; margin-bottom: 20px !important; }
+    .social-icons { gap: 15px !important; margin-bottom: 25px !important; }
+    .social-icons a { width: 40px !important; height: 40px !important; font-size: 1.1rem !important; }
+    .btn { padding: 12px 28px !important; font-size: 0.85rem !important; }
+    .strap { height: 120px !important; }
+    .id-card { width: 220px !important; height: 300px !important; padding: 12px !important; }
+}
+
+/* ======================================================= */
+/*  === PERBESARAN HALAMAN ABOUT UNTUK LAYAR LAPTOP/PC === */
+/* ======================================================= */
+
+/* 1. Teks Identitas (Diturunkan sedikit agar tidak memakan ruang bawah) */
+.about-label { font-size: 0.9rem !important; margin-bottom: 15px !important; }
+.about-name { font-size: 3.2rem !important; line-height: 1.15 !important; margin-bottom: 20px !important; }
+.about-description { font-size: 1.05rem !important; line-height: 1.7 !important; max-width: 800px !important; }
+
+/* 2. Foto Profil (Diturunkan tingginya agar kotak statistik bisa naik) */
+.about-image img { width: 300px !important; height: 400px !important; }
+
+/* 3. Kotak Statistik (Dirampingkan sedikit) */
+.stat-box { padding: 20px !important; min-height: 120px !important; }
+.stat-number { font-size: 1.7rem !important; } 
+.stat-icon { font-size: 1.5rem !important; } 
+.stat-title { font-size: 0.8rem !important; letter-spacing: 1.5px !important; }
+.stat-arrow { font-size: 1.1rem !important; }
+
+/* 4. Menyeimbangkan Posisi Keseluruhan Halaman ke Tengah Layar */
+#about {
+    padding-top: 120px !important; 
+    padding-bottom: 40px !important;
+    justify-content: center !important;
+}
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    .about-label { font-size: 0.85rem !important; margin-bottom: 15px !important; }
+    .about-name { font-size: 2.2rem !important; margin-bottom: 20px !important; }
+    .about-description { font-size: 0.95rem !important; }
+    .about-image img { width: 280px !important; height: 380px !important; }
+    .stat-box { padding: 20px !important; min-height: 110px !important; }
+    .stat-number { font-size: 1.4rem !important; }
+    .stat-icon { font-size: 1.3rem !important; }
+    .stat-title { font-size: 0.75rem !important; letter-spacing: 1px !important; }
+    .stat-arrow { font-size: 0.9rem !important; }
+}
+
+/* ======================================================= */
+/* === PERBESARAN JUDUL HALAMAN EDUCATION (LAPTOP/PC) ==== */
+/* ======================================================= */
+
+#education .section-heading {
+    font-size: 3rem !important; /* Memperbesar tulisan Education secara signifikan */
+    letter-spacing: 2px !important; /* Sedikit meregangkan huruf agar lebih elegan */
+    margin-bottom: 50px !important; /* Memberikan ruang napas ekstra antara judul dan kartu */
+}
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    #education .section-heading {
+        font-size: 2rem !important; /* Mengecil kembali agar tidak meluber di HP */
+        letter-spacing: 0px !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+/* ======================================================= */
+/* === PERBESARAN & POSISI HALAMAN WORKING (LAPTOP/PC) === */
+/* ======================================================= */
+
+/* 1. Kembalikan Posisi Keseluruhan ke Tengah Layar */
+#working {
+    justify-content: center !important; /* KUNCI: Menarik konten turun ke ekuator/tengah layar */
+    padding-top: 90px !important; /* Memberikan ruang wajar di atas agar tidak menabrak Navbar */
+    padding-bottom: 50px !important;
+}
+
+/* 2. Perbesar Tulisan Judul */
+#working .section-heading {
+    font-size: 3rem !important; /* Diperbesar agar seimbang dengan layar fullscreen */
+    letter-spacing: 2px !important;
+    margin-bottom: 50px !important; 
+}
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    #working {
+        justify-content: flex-start !important; /* Khusus HP tetap ditarik dari atas agar tidak terpotong bawahnya */
+        padding-top: 100px !important;
+    }
+    #working .section-heading {
+        font-size: 2rem !important; 
+        letter-spacing: 0px !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+/* ======================================================= */
+/* === PENYESUAIAN HALAMAN PORTOFOLIO (LAPTOP/PC) ======== */
+/* ======================================================= */
+
+/* 1. Kembalikan Posisi ke Tengah Layar Secara Vertikal */
+#portofolio {
+    justify-content: center !important; 
+    padding-top: 130px !important; /* KUNCI: Tambah dorongan drastis dari atas agar turun ke tengah */
+    padding-bottom: 10px !important; /* Pangkas habis margin bawah yang tidak perlu */
+}
+
+/* 2. Perbesar Judul Portfolio Showcase */
+#portofolio .section-heading {
+    font-size: 3rem !important; 
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+}
+
+/* 3. Seimbangkan Jarak Subtitle & Tab Menu */
+#portofolio .portfolio-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 25px !important;
+}
+
+.portfolio-tabs {
+    margin-bottom: 30px !important;
+}
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    #portofolio {
+        justify-content: flex-start !important;
+        padding-top: 100px !important;
+    }
+    #portofolio .section-heading {
+        font-size: 1.8rem !important;
+        letter-spacing: 0px !important;
+        margin-bottom: 10px !important;
+    }
+    #portofolio .portfolio-subtitle {
+        font-size: 0.85rem !important;
+        margin-bottom: 20px !important;
+    }
+    .portfolio-tabs {
+        margin-bottom: 20px !important;
+    }
+}
+
+/* ======================================================= */
+/* === PERBAIKAN & PERBESARAN HALAMAN ACHIEVEMENT ======== */
+/* ======================================================= */
+
+/* 1. Kunci Posisi agar Stabil dan Tidak Melompat (Direvisi) */
+#achievement {
+    justify-content: flex-start !important; 
+    padding-top: 170px !important; 
+    padding-bottom: 30px !important;
+}
+
+/* 2. Perbesar Judul agar Megah seperti Halaman Lain */
+#achievement .section-heading {
+    font-size: 3rem !important; 
+    letter-spacing: 2px !important;
+    margin-bottom: 50px !important;
+}
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    #achievement {
+        justify-content: flex-start !important;
+        padding-top: 100px !important;
+    }
+    #achievement .section-heading {
+        font-size: 2rem !important;
+        letter-spacing: 0px !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+/* ======================================================= */
+/* === PERBESARAN HALAMAN CONTACT UNTUK LAPTOP/PC ======== */
+/* ======================================================= */
+
+/* 1. Kunci Posisi Contact ke Tengah Secara Manual */
+#contact {
+    justify-content: center !important; /* Nyalakan kembali penengah otomatis */
+    padding-top: 80px !important; /* Kita potong drastis dari 170px ke 80px agar naik! */
+    padding-bottom: 20px !important; 
+    min-height: 100vh !important; /* Memastikan blok ini tingginya pas 1 layar penuh */
+}
+
+/* 2. Judul Contact Me */
+#contact .section-heading {
+    font-size: 3rem !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 10px !important;
+}
+#contact .portfolio-subtitle {
+    font-size: 1rem !important; /* Turunkan sedikit ukurannya */
+    margin-bottom: 45px !important; /* Kurangi jarak ke kotak informasi */
+}
+
+/* 3. Perlebar Area Konten Utama */
+.contact-layout {
+    max-width: 1050px !important; /* Dirapatkan sedikit dari 1200px */
+    margin-top: 0 !important; 
+    gap: 40px !important; /* Jarak antara teks dan HP dikurangi agar seimbang */
+}
+
+/* 4. Perbesar Teks dan Ikon Info Kontak (Direvisi agar lebih kompak) */
+.contact-info-list {
+    gap: 35px 25px !important; /* Kurangi jarak antar baris info */
+}
+.info-item i {
+    width: 55px !important; /* Kurangi ukuran ikon bulat */
+    height: 55px !important;
+    font-size: 1.4rem !important; 
+}
+.info-item h4 {
+    font-size: 1.15rem !important; 
+    margin-bottom: 3px !important;
+}
+.info-item p {
+    font-size: 0.95rem !important; 
+}
+
+/* 5. Perbesar HP 3D Mockup (Direvisi agar muat di layar) */
+.phone-mockup {
+    width: 250px !important; /* Lebar HP dipangkas agar tidak menyita tempat */
+    height: 500px !important; /* Tinggi HP dipangkas agar tidak menembus batas bawah layar */
+}
+.phone-notch {
+    width: 110px !important; 
+    height: 22px !important;
+}
+
+/* ======================================================= */
+/* === PELINDUNG: KEMBALIKAN KE UKURAN NORMAL DI HP ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    #contact {
+        padding-top: 100px !important;
+        padding-bottom: 80px !important;
+    }
+    #contact .section-heading {
+        font-size: 2.2rem !important;
+        letter-spacing: 0px !important;
+        margin-bottom: 10px !important;
+    }
+    #contact .portfolio-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 40px !important;
+    }
+    .contact-layout {
+        gap: 40px !important;
+    }
+    .contact-info-list {
+        gap: 30px !important;
+    }
+    .info-item i {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.3rem !important;
+    }
+    .info-item h4 { font-size: 1.05rem !important; }
+    .info-item p { font-size: 0.85rem !important; }
+    .phone-mockup {
+        width: 230px !important;
+        height: 460px !important;
+    }
+    .phone-notch {
+        width: 100px !important;
+        height: 20px !important;
+    }
 }
