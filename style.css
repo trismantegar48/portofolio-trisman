@@ -1078,9 +1078,9 @@ section {
     height: 12px;
     border-radius: 50%;
 }
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
+.dot.red { background: #52c4ff; }
+.dot.yellow { background: #ffffff; }
+.dot.green { background: #52c4ff; }
 
 .window-title {
     color: #aaa;
@@ -1685,6 +1685,10 @@ img.mobile-app-img {
         letter-spacing: 0px !important; 
         padding: 0 10px; 
         word-wrap: break-word; 
+    }
+
+    #custom-cursor {
+        display: none !important;
     }
 }
 
