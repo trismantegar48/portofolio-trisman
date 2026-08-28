@@ -486,7 +486,7 @@ const projectsDetailsData = [
         // PROJECT 2
         title: "IManQu (Insan Membaca Quran) - 2024",
         github: "https://github.com/trismantegar48/ProjectAkhir_PMC_ImanQu.git",
-        desc: "ImanQu (Insan Membaca Quran) merupakan aplikasi berbasis mobile menggunakan bahasa pemrograman Java yang dirancang sebagai solusi inovatif untuk membantu umat Muslim dalam menghafal Al-Quran dengan lebih mudah dan efektif",
+        desc: "ImanQu (Insan Menghafal Quran) merupakan aplikasi berbasis mobile menggunakan bahasa pemrograman Java yang dirancang sebagai solusi inovatif untuk membantu umat Muslim dalam menghafal Al-Quran dengan lebih mudah dan efektif",
         images: [
             "assets/img/projects/imanqu/imanqu1.png",
             "assets/img/projects/imanqu/imanqu2.png",
