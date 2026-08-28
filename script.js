@@ -537,7 +537,7 @@ const projectsDetailsData = [
         images: [], // KUNCI: Harus kosong agar PDF muncul
         techs: [
             { name: "Python", bg: "#3776ab" },
-            { name: "Machine Learning", bg: "#52c4ff", color: "#000" },
+            { name: "Deep Learning", bg: "#52c4ff", color: "#000" },
             { name: "Jupyter Notebook", bg: "#f37626" }
         ]
     },
@@ -576,7 +576,7 @@ const projectsDetailsData = [
         ], 
         techs: [
             { name: "Python", bg: "#3776ab" },
-            { name: "Machine Learning", bg: "#52c4ff", color: "#000" },
+            { name: "Deep Learning", bg: "#52c4ff", color: "#000" },
             { name: "LSTM", bg: "#ff4757" },
             { name: "Streamlit", bg: "#ff4b4b" },
             { name: "Jupyter Notebook", bg: "#f37626" },
