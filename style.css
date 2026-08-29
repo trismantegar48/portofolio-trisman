@@ -2154,3 +2154,30 @@ section, footer {
         height: 20px !important;
     }
 }
+
+/* ======================================================= */
+/* === PERBAIKAN HEADER MODAL PROJECT DI LAYAR HP ======== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    .modal-window-header {
+        gap: 15px !important; /* KUNCI: Memberikan jarak paksa antar elemen agar tidak berdempetan */
+        align-items: flex-start !important; /* Membuat elemen sejajar dari atas jika teks turun baris */
+    }
+    
+    .window-title {
+        flex: 1 !important; /* Menginstruksikan teks untuk hanya mengisi sisa ruang yang aman */
+        text-align: center !important; /* Merapikan teks panjang agar berada di tengah */
+        line-height: 1.4 !important; /* Memberi ruang napas antar baris jika judul sangat panjang */
+        font-size: 0.8rem !important; /* Sedikit dikecilkan agar proporsional di HP */
+    }
+    
+    .window-dots {
+        flex-shrink: 0 !important; /* Memproteksi titik 3 agar tidak menyusut/gepeng tertekan teks */
+        margin-top: 3px !important; /* Menyeimbangkan posisi titik dengan teks */
+    }
+    
+    .close-project-modal {
+        flex-shrink: 0 !important; /* Memproteksi tombol X agar tidak ikut tertekan */
+        margin-top: -3px !important; /* Menyeimbangkan posisi X dengan teks */
+    }
+}

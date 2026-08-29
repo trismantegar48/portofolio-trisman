@@ -561,7 +561,7 @@ const projectsDetailsData = [
         ]
     },
     {
-        // PROJECT 6 (GAMBAR DI CAROUSEL, PDF HANYA DI TOMBOL)
+        // PROJECT 6
         title: "Barru Stunting Prediction - 2026",
         github: "https://github.com/trismantegar48/barrustunting_prediciton.git",
         pdf: "assets/img/projects/stunting/stunting7.pdf", 
