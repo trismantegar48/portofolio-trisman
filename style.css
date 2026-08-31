@@ -2181,3 +2181,44 @@ section, footer {
         margin-top: -3px !important; /* Menyeimbangkan posisi X dengan teks */
     }
 }
+
+/* ======================================================= */
+/* === PERBAIKAN RESPONSIVITAS IPAD & TABLET (Max 1100px)= */
+/* ======================================================= */
+@media (max-width: 1100px) {
+    
+    /* 1. HALAMAN HOME: Susun atas-bawah agar ID Card tidak menabrak teks */
+    .home-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-top: 140px !important;
+        gap: 50px !important;
+    }
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100% !important;
+    }
+    .action-buttons {
+        justify-content: center;
+    }
+    .hero-title {
+        font-size: 3.2rem !important; /* Disesuaikan sedikit agar proporsional di tablet */
+    }
+
+    /* 2. HALAMAN CONTACT: Susun atas-bawah agar HP Mockup tidak menabrak teks info */
+    .contact-layout { 
+        flex-direction: column !important; 
+        gap: 60px !important; 
+        margin-top: 20px !important; 
+    }
+    .contact-info-list {
+        grid-template-columns: 1fr 1fr !important; /* Tetap pertahankan 2 kolom yang rapi */
+        text-align: left;
+    }
+    .phone-mockup { 
+        transform: none !important; /* Matikan rotasi miring 3D agar duduk manis di tengah */
+        margin-top: 20px;
+    }
+}
