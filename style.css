@@ -2261,3 +2261,21 @@ section, footer {
         justify-self: flex-start !important; /* Rata kiri mengikuti yang lain */
     }
 }
+
+/* ======================================================= */
+/* === PERBAIKAN JUDUL ACHIEVEMENT TERPOTONG DI HP ======= */
+/* ======================================================= */
+@media (max-width: 768px) {
+    #achievement .section-heading {
+        font-size: 1.8rem !important; /* Kita turunkan dari 2rem agar kata ACHIEVEMENT muat */
+        letter-spacing: -1px !important; /* Merapatkan sedikit hurufnya agar hemat ruang */
+        margin-bottom: 25px !important;
+    }
+}
+
+/* Proteksi ekstra untuk layar HP yang layarnya lebih sempit lagi */
+@media (max-width: 480px) {
+    #achievement .section-heading {
+        font-size: 1.4rem !important; 
+    }
+}
